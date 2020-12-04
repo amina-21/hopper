@@ -1,14 +1,22 @@
 // Your web app's Firebase configuration
   // For Firebase JS SDK v7.20.0 and later, measurementId is optional
   var Config = {
-    apiKey: "AIzaSyBvUFxfwxdcNzCwitn4Q99xi0RRmc8Qmcs",
+    apiKey: "AIzaSyCfkN6BAGdfz_lR0TngffCPS2ivbM4GKgw",
+    authDomain: "hopper-54bd1.firebaseapp.com",
+    databaseURL: "https://hopper-54bd1-default-rtdb.firebaseio.com/",
+    projectId: "hopper-54bd1",
+    storageBucket: "hopper-54bd1.appspot.com",
+    messagingSenderId: "1041547804099",
+    appId: "1:1041547804099:web:8779786c0f7231cf5a1176",
+    measurementId: "G-0DZ08GJ3MR"
+    /*apiKey: "AIzaSyBvUFxfwxdcNzCwitn4Q99xi0RRmc8Qmcs",
     authDomain: "jumpervoiture.firebaseapp.com",
     databaseURL: "https://jumpervoiture-default-rtdb.firebaseio.com/",
     projectId: "jumpervoiture",
     storageBucket: "jumpervoiture.appspot.com",
     messagingSenderId: "839526889386",
     appId: "1:839526889386:web:5928943038bf3e8aff9dd3",
-    measurementId: "G-TRTFWKPBJR"
+    measurementId: "G-TRTFWKPBJR"*/
   };
   // Initialize Firebase
   firebase.initializeApp(Config);
