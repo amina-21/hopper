@@ -24,6 +24,9 @@
 // reference messages collection
 var messagesRef = firebase.database().ref('messages');
 
+
+
+
 // Listen for form submit
 
 document.getElementById('contactForm').addEventListener('submit', submitForm);
@@ -36,12 +39,22 @@ function submitForm(e){
     var name = getInputVal('name');
     var email = getInputVal('email');
     var  phone = getInputVal('phone');
-    var message = getInputVal('message');
+    var message = func2();
     var cv = getInputVal('cv');
     
     //save message
-    saveMessage(name, email, phone,message, cv)
+    saveMessage(name, email, phone,message, cv);
 
+     // Show alert
+  document.querySelector('.alert').style.display = 'block';
+
+  // Hide alert after 3 seconds
+  setTimeout(function(){
+    document.querySelector('.alert').style.display = 'none';
+  },3000);
+
+  // Clear form
+  document.getElementById('contactForm').reset();
     
 
     //console.log(name);
@@ -52,6 +65,31 @@ function submitForm(e){
 function getInputVal(id){
     return document.getElementById(id).value;
 }
+
+// function for radio qualifications values
+
+ // by Id
+ function func2() 
+ {
+     if(document.getElementById("inlineRadio1").checked)
+     {
+         var val = document.getElementById("inlineRadio1").value;
+         return val;
+         
+     }
+     
+     else if(document.getElementById("inlineRadio2").checked)
+     {
+         var val = document.getElementById("inlineRadio2").value;
+         return val;
+     }
+     
+     else if(document.getElementById("inlineRadio3").checked)
+     {
+         var val = document.getElementById("inlineRadio3").value;
+         return val;
+     }
+ }
 
 // Save messages to firebase
 function saveMessage(name, email, phone, message, cv){
